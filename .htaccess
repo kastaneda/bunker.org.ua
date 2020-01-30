@@ -1,2 +1,1 @@
-AddHandler type-map var
 DirectoryIndex index.var
