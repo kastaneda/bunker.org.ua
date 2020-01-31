@@ -22,6 +22,6 @@ DNS та електронної пошти.
 
 <p itemscope itemtype="http://schema.org/Person">
   <span itemprop="name">Дмитро К.</span>
-  &lt;<a href="mailto:%22Дмитро К.%22%20%3cgray@bunker.org.ua%3e"
+  &lt;<a href="mailto:%22Дмитро%20К.%22%20%3cgray@bunker.org.ua%3e"
     class="mail" itemprop="email">gray@bunker.org.ua</a>&gt;
 </p>
