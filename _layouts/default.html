@@ -13,7 +13,7 @@
     <meta name="description" content="{{ site.i18n_description[page.lang] | escape }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' }}">
     <style>
-{{ '@import "main"' | sassify }}
+{{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' }}
     </style>{%
         if page.ref
 %}{%    assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
