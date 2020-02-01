@@ -4,12 +4,14 @@ description: &siteDescEn Private service for web hosting, DNS, and email
 
 timezone: Europe/Kiev
 url: https://bunker.org.ua
-baseurl: ""
+baseurl: ''
 lang: en
 direction: ltr
 
 defaults:
-  - values:
+  - scope:
+      path: ''
+    values:
       lang: en
       layout: default
   - scope:
