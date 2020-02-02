@@ -7,7 +7,7 @@ sitemap: false
 {%    for post in site.posts
 %}{%    if post.sitemap != false %}
 <url>
-  <loc>{{ site.url }}{{ site.baseurl }}{{ post.url | remove: 'index.html'}}</loc>
+  <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
   <lastmod>{{ post.mtime | default: post.date | default: site.time | date_to_xmlschema }}</lastmod>
 </url>
 {%      endif
@@ -16,7 +16,7 @@ sitemap: false
 %}{%  for page in site.pages
 %}{%    if page.sitemap != false %}
 <url>
-  <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | remove: 'index.html'}}</loc>
+  <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
   <lastmod>{{ page.mtime | default: page.date | default: site.time | date_to_xmlschema }}</lastmod>
 </url>
 {%      endif
