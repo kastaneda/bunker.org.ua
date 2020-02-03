@@ -12,10 +12,12 @@ DNS, and email.
 
 The Bunker is working since 2008.
 
+
 Announcements
 -------------
 
 {% include latest-news.html %}
+
 
 Contacts
 --------
