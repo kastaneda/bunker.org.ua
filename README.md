@@ -7,9 +7,7 @@ Jekyll-powered static site [bunker.org.ua](https://bunker.org.ua/).
 Features
 --------
 
- - Clean and simple minimalistic design
-    - Dark mode supported
- - Lightweight and fast
+ - Minimalistic design
  - Every page have English, Ukrainian, and Russian translations
 
 
