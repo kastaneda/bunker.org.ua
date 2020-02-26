@@ -16,7 +16,7 @@ The Bunker is working since 2008.
 Announcements
 -------------
 
-{% include latest-news.html %}
+{% include index-news.html %}
 
 
 Contacts
