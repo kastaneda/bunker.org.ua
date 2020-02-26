@@ -53,7 +53,7 @@
 %}{%      break
 %}{%    endfor
 %}{%    if _prev %}
-    <link rel="prev" href="{{ _root_prefix }}{{ _prev.url }}">{%
+    <link rel="prev" href="{{ _root_prefix }}{{ _prev.url | remove_first: '/' }}">{%
         endif
 %}{%    assign _next = page.next
 %}{%    for _ in (1..10)
@@ -66,7 +66,7 @@
 %}{%      break
 %}{%    endfor
 %}{%    if _next %}
-    <link rel="next" href="{{ _root_prefix }}{{ _next.url }}">{%
+    <link rel="next" href="{{ _root_prefix }}{{ _next.url | remove_first: '/' }}">{%
         endif
 %}{%  endif %}
     <link rel="shortcut icon" href="{{ _root_prefix }}favicon.ico">
@@ -93,20 +93,20 @@
 %}{%    for _item in _list
 %}{%      if _item.url != page.url
 %}{%        assign _item_url = _item.url | slice: 1, _item.url.size | default: './' %}
-              <li lang="{{ _item.lang }}">
-                <a href="{{ _root_prefix }}{{ _item_url }}" hreflang="{{
-                  _item.lang }}">{{ site.i18n_lang_names[_item.lang] }}</a>
-              </li>{%
+            <li lang="{{ _item.lang }}">
+              <a href="{{ _root_prefix }}{{ _item_url }}" hreflang="{{
+                _item.lang }}">{{ site.i18n_lang_names[_item.lang] }}</a>
+            </li>{%
           endif
 %}{%    endfor
 %}{%    assign _list = site.pages | where: 'ref', page.ref | sort: 'lang'
 %}{%    for _item in _list
 %}{%      if _item.url != page.url
 %}{%        assign _item_url = _item.url | slice: 1, _item.url.size | default: './' %}
-              <li lang="{{ _item.lang }}">
-                <a href="{{ _root_prefix }}{{ _item_url }}" hreflang="{{
-                  _item.lang }}">{{ site.i18n_lang_names[_item.lang] }}</a>
-              </li>{%
+            <li lang="{{ _item.lang }}">
+              <a href="{{ _root_prefix }}{{ _item_url }}" hreflang="{{
+                _item.lang }}">{{ site.i18n_lang_names[_item.lang] }}</a>
+            </li>{%
           endif
 %}{%    endfor %}
           </ul>
