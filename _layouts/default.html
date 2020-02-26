@@ -112,7 +112,7 @@
           </ul>
         </nav>{%
         endif %}
-        {{ site.i18n_footer[page.lang] | markdownify }}
+        <p>{{ site.i18n_footer[page.lang] | escape }}</p>
       </div>
     </footer>
   </body>
