@@ -1,15 +1,9 @@
-{%    assign _root_prefix = ''
-%}{%  assign _root_subfolders = page.url | append: '#' | split: '/' | size | minus: 2
-%}{%  for x in (1.._root_subfolders)
-%}{%    assign _root_prefix = _root_prefix | append: '../'
-%}{%  endfor %}
-
-<ul>{%
-      assign _list = site.posts | where: 'lang', page.lang
-%}{%  for _item in _list %}
+{% assign _list = site.posts | where: 'lang', page.lang %}
+<ul>
+{% for _item in _list %}
   <li>
     <em class="xtra">{{ _item.date | date: '%Y-%m-%d' }}.</em>
-    <a href="{{ _root_prefix }}{{ _item.url | remove_first: '/' }}">{{ _item.title }}</a>
-  </li>{%
-      endfor %}
+    <a href="{{ _item.url | remove_first: '/' }}">{{ _item.title }}</a>
+  </li>
+{% endfor %}
 </ul>
