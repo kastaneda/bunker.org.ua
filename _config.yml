@@ -6,7 +6,6 @@ timezone: Europe/Kiev
 url: https://bunker.org.ua
 baseurl: ''
 lang: en
-direction: ltr
 
 defaults:
   - scope:
