@@ -24,7 +24,7 @@ exclude:
   - bunker.org.ua.tar.gz
 
 # sass:
-#     style: compressed
+#   style: compressed
 
 i18n_title:
   en: *siteTitleEn
