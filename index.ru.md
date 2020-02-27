@@ -19,6 +19,12 @@ DNS и электронной почты.
 {% include index-news.html %}
 
 
+Благодарности
+-------------
+
+Наши серверы работают на [Debian GNU/Linux][1].
+
+
 Контакты
 --------
 
@@ -27,3 +33,5 @@ DNS и электронной почты.
   &lt;<a href="mailto:%22Дмитрий%20К.%22%20%3cgray@bunker.org.ua%3e"
     class="mail" itemprop="email">gray@bunker.org.ua</a>&gt;
 </p>
+
+[1]: https://www.debian.org/index.ru.html

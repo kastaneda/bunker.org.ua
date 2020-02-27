@@ -19,6 +19,12 @@ Announcements
 {% include index-news.html %}
 
 
+Acknowledgements
+----------------
+
+Our servers runs on [Debian GNU/Linux][1].
+
+
 Contacts
 --------
 
@@ -27,3 +33,5 @@ Contacts
   &lt;<a href="mailto:%22Dmytro%20K.%22%20%3cgray@bunker.org.ua%3e"
     class="mail" itemprop="email">gray@bunker.org.ua</a>&gt;
 </p>
+
+[1]: https://www.debian.org/index.en.html

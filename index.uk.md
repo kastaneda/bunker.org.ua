@@ -19,6 +19,12 @@ DNS та електронної пошти.
 {% include index-news.html %}
 
 
+Подяка
+------
+
+Наші сервери працюють на [Debian GNU/Linux][1].
+
+
 Контакти
 --------
 
@@ -27,3 +33,5 @@ DNS та електронної пошти.
   &lt;<a href="mailto:%22Дмитро%20К.%22%20%3cgray@bunker.org.ua%3e"
     class="mail" itemprop="email">gray@bunker.org.ua</a>&gt;
 </p>
+
+[1]: https://www.debian.org/index.uk.html
