@@ -30,8 +30,8 @@
     <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ _item_url }}">{%
           endif
 %}{%    endfor
-%}{%  endif %}{%
-      for _item in page.head_extras | default: [] %}
+%}{%  endif
+%}{%  for _item in page.head_extras | default: [] %}
     {{  _item
 }}{%  endfor %}
     <meta name="twitter:card" content="summary">
