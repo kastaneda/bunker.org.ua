@@ -1,0 +1,69 @@
+{%    assign _root_prefix = ''
+%}{%  assign _root_subfolders = page.url | append: '#' | split: '/' | size | minus: 2
+%}{%  for x in (1.._root_subfolders)
+%}{%    assign _root_prefix = _root_prefix | append: '../'
+%}{%  endfor
+%}    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | escape }}{% if page.ref != 'index' %} • {{
+        site.i18n_title[page.lang] | default: site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{{ site.i18n_description[page.lang] | escape }}">
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{%
+      if page.ref
+%}{%    assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
+%}{%    for _item in _list
+%}{%      if _item.url != page.url
+%}{%        assign _item_url = _item.url | split: '/' | last %}
+    <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ _item_url }}">{%
+          endif
+%}{%    endfor
+%}{%    assign _list = site.pages | where: 'ref', page.ref | sort: 'lang'
+%}{%    for _item in _list
+%}{%      if _item.url != page.url
+%}{%        assign _item_url = _item.url | split: '/' | last %}
+    <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ _item_url }}">{%
+          endif
+%}{%    endfor
+%}{%  endif
+%}{%  for _item in page.head_extras | default: [] %}
+    {{  _item
+}}{%  endfor %}
+    <meta name="twitter:card" content="summary">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:site_name" content="{{ site.i18n_title[page.lang] | default: site.title | escape }}">
+    <meta property="og:description" content="{{ site.i18n_description[page.lang] | escape }}">{%
+      if page.layout == 'post' %}
+    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+    <meta property="article:modified_time" content="{{ page.mtime | default: page.date | date_to_xmlschema }}">{%
+        assign _prev = page.previous
+%}{%    for _ in (1..10)
+%}{%      if _prev
+%}{%        if _prev.ref == page.ref or _prev.lang != page.lang
+%}{%          assign _prev = _prev.previous
+%}{%          continue
+%}{%        endif
+%}{%      endif
+%}{%      break
+%}{%    endfor
+%}{%    if _prev %}
+    <link rel="prev" href="{{ _root_prefix }}{{ _prev.url | remove_first: '/' }}">{%
+        endif
+%}{%    assign _next = page.next
+%}{%    for _ in (1..10)
+%}{%      if _next
+%}{%        if _next.ref == page.ref or _next.lang != page.lang
+%}{%          assign _next = _next.next
+%}{%          continue
+%}{%        endif
+%}{%      endif
+%}{%      break
+%}{%    endfor
+%}{%    if _next %}
+    <link rel="next" href="{{ _root_prefix }}{{ _next.url | remove_first: '/' }}">{%
+        endif
+%}{%  endif %}
+    <link rel="shortcut icon" href="{{ _root_prefix }}favicon.ico">
+    <style>
+{{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' }}
+    </style>
