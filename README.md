@@ -14,12 +14,6 @@ Features
 Work in progress
 ----------------
 
-Set each file timestamp to the time of the last commit:
-
-```sh
-for f in `git ls-files`; do d=`git log -1 --pretty=format:%cI $f`; touch -d $d $f; done
-```
-
 Update `mtime` field in front matter, based on file mtime:
 
 ```sh
