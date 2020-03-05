@@ -13,8 +13,8 @@ DNS, and email.
 The Bunker has been working since 2008.
 
 
-Announcements
--------------
+Service announcements
+---------------------
 
 {% include index-news.html %}
 
