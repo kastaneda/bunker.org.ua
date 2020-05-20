@@ -3,7 +3,7 @@ title: Проект «Бункер»
 lang: uk
 ref: index
 date: 2020-01-06 14:45:00 +02:00
-mtime: 2020-02-27 03:33:55 +0200
+mtime: 2020-05-20 03:43:39 +0300
 head_extras:
  - <link rel="alternate" type="application/rss+xml" href="feed.uk.xml">
 ---
@@ -24,7 +24,7 @@ DNS та електронної пошти.
 {% include index-news.html %}
 
 
-Подяка
+Подяки
 ------
 
 «Бункер» працює на [Debian GNU/Linux][1].
