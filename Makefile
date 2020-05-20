@@ -15,8 +15,8 @@ post_clone:
 save_mtime:
 	for f in `git diff --name-only | grep \.md$$`; do \
 	  d=`date "+%F %X %z" -r $$f`; \
-	  echo sed "s/^mtime:.*$/mtime: $$d/" -i $$f; \
-	  echo touch -d "$$d" $$f; \
+	  sed "s/^mtime:.*\$$/mtime: $$d/" -i $$f; \
+	  LC_ALL=C touch -d "$$d" $$f; \
 	done
 
 .PHONY: build test post_clone save_mtime
