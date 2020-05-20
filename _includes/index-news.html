@@ -2,7 +2,7 @@
 <ul>
 {% for _item in _list %}
   <li>
-    <em class="xtra">{{ _item.date | date: '%Y-%m-%d' }}.</em>
+    <em class="xtra">{{ _item.date | date: '%Y-%m-%d' }}:</em>
     <a href="{{ _item.url | remove_first: '/' }}">{{ _item.title }}</a>
   </li>
 {% endfor %}
