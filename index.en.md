@@ -29,7 +29,7 @@ Acknowledgements
 
 The Bunker runs on [Debian GNU/Linux][1].
 
-We use free/libre and open source software software only.
+We use free/libre and open source software only.
 Our service is possible only because of free software.
 We are sincerely thankful to everyone involved in creation or support
 of free software.
