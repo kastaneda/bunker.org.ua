@@ -23,8 +23,8 @@ exclude:
   - README.md
   - bunker.org.ua.tar.gz
 
-# sass:
-#   style: compressed
+sass:
+  style: compact
 
 i18n_title:
   en: *siteTitleEn
