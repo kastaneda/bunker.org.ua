@@ -6,6 +6,9 @@ build:
 	find _site -regex '.*\.\(html\|xml\|txt\|ico\)$$' | xargs gzip -k9
 	tar zcf bunker.org.ua.tar.gz -C _site/ .
 
+draft:
+	jekyll build -D
+
 test:
 	$(HTMLPROOFER) _site --check-html --check-opengraph --check-sri
 
@@ -19,4 +22,4 @@ save_mtime:
 	  touch -d "$$d" $$f; \
 	done
 
-.PHONY: build test post_clone save_mtime
+.PHONY: build draft test post_clone save_mtime
