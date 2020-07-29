@@ -5,7 +5,6 @@ yaml-files:
   - '*.yaml'
   - '*.yml'
   - '.yamllint'
-  - '*.md'
 
 rules:
 
