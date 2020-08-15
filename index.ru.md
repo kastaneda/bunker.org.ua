@@ -7,6 +7,7 @@ mtime: 2020-05-20 04:50:00 +0300
 head_extras:
  - <link rel="alternate" type="application/rss+xml" href="feed.ru.xml">
 ---
+
 Проект «Бункер» — это небольшой частный сервис для веб-хостинга,
 DNS и электронной почты.
 

@@ -7,6 +7,7 @@ mtime: 2020-05-20 04:50:00 +0300
 head_extras:
  - <link rel="alternate" type="application/rss+xml" href="feed.en.xml">
 ---
+
 The Bunker project is a small private service for web hosting,
 DNS, and email.
 
