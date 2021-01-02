@@ -36,6 +36,9 @@ nav
 nav a, a.mail
   color: inherit !important
 
+time
+  font-style: italic
+
 @media print
   nav
     display: none
@@ -43,8 +46,9 @@ nav a, a.mail
 @media (max-width: $content-width)
   li
     margin: .5em 0
-  .xtra
-    display: none
+
+    time
+      display: none
 
 // Damn, should I really define colors?
 
