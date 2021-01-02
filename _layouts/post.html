@@ -2,10 +2,13 @@
 layout: default
 ---
 
+<article itemscope itemtype="http://schema.org/Article">
+
 <p>
-  <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S%z' }}">
+  <time itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S%z' }}">
     {{ page.date | date: '%Y-%m-%d %H:%M' }}
   </time>
 </p>
 
 {{ content }}
+</article>
