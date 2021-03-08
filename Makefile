@@ -1,18 +1,23 @@
 ROOT := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 HTMLPROOFER := docker run --rm -v $(ROOT)_site:/_site 18fgsa/html-proofer
 
-build:
+build: clean
 	jekyll build
 
-draft:
+draft: clean
 	jekyll build -D
 
 compress:
 	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs zopfli --i50
 	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs brotli -Z
 
-package:
-	tar zcf bunker.org.ua.tar.gz -C _site/ .
+package: bunker.org.ua.tar.gz
+
+bunker.org.ua.tar.gz:
+	tar zcf $@ -C _site/ .
+
+clean:
+	rm -f bunker.org.ua.tar.gz
 
 test:
 	$(HTMLPROOFER) _site --check-html --check-opengraph --check-sri
@@ -27,4 +32,4 @@ save_mtime:
 	  touch -d "$$d" $$f; \
 	done
 
-.PHONY: build draft compress package test post_clone save_mtime
+.PHONY: build draft compress package clean test post_clone save_mtime
