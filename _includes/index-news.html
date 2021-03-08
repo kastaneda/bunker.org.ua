@@ -1,11 +1,11 @@
 {% assign _list = site.posts | where: 'lang', page.lang %}
 <ul>
-{% for _item in _list %}
+{%- for _item in _list %}
   <li>
     <time datetime="{{ _item.date | date: '%Y-%m-%dT%H:%M:%S%z' }}">
       {{ _item.date | date: '%Y-%m-%d' }}:
     </time>
     <a href="{{ _item.url | remove_first: '/' }}">{{ _item.title }}</a>
   </li>
-{% endfor %}
+{%- endfor %}
 </ul>
