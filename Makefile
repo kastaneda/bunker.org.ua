@@ -3,11 +3,16 @@ HTMLPROOFER := docker run --rm -v $(ROOT)_site:/_site 18fgsa/html-proofer
 
 build:
 	jekyll build
-	find _site -regex '.*\.\(html\|xml\|txt\|ico\)$$' | xargs gzip -k9
-	tar zcf bunker.org.ua.tar.gz -C _site/ .
 
 draft:
 	jekyll build -D
+
+compress:
+	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs zopfli --i50
+	find _site -regex '.*\.\(html\|xml\|ico\)$$' | xargs brotli -Z
+
+package:
+	tar zcf bunker.org.ua.tar.gz -C _site/ .
 
 test:
 	$(HTMLPROOFER) _site --check-html --check-opengraph --check-sri
@@ -22,4 +27,4 @@ save_mtime:
 	  touch -d "$$d" $$f; \
 	done
 
-.PHONY: build draft test post_clone save_mtime
+.PHONY: build draft compress package test post_clone save_mtime
