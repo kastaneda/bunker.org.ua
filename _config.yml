@@ -39,7 +39,7 @@ i18n_description:
 i18n_lang_names:
   en: English
   uk: Українська
-  ru: Русский
+# ru: Русский
 
 i18n_footer:
   en: © D.K.
