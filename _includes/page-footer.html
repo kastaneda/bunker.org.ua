@@ -5,7 +5,7 @@
           <ul>{%
         assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
 %}{%    for _item in _list
-%}{%      if _item.url != page.url
+%}{%      if _item.url != page.url and (site.i18n_lang_names contains _item.lang)
 %}{%        assign _item_url = _item.url | split: '/' | last %}
             <li lang="{{ _item.lang }}">
               <a href="{{ _item_url }}" hreflang="{{ _item.lang }}">{{ site.i18n_lang_names[_item.lang] }}</a>
