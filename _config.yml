@@ -24,24 +24,34 @@ exclude:
   - bunker.org.ua.tar.gz
 
 sass:
-  style: compressed
+  style: compact
 
-i18n_title:
-  en: *siteTitleEn
-  uk: Проект «Бункер»
-  ru: Проект «Бункер»
+i18n_lang_order:
+  - en
+  - uk
 
-i18n_description:
-  en: *siteDescEn
-  uk: Приватний сервіс для веб-хостингу, DNS та електронної пошти
-  ru: Частный сервис для веб-хостинга, DNS и электронной почты
-
-i18n_lang_names:
-  en: English
-  uk: Українська
-# ru: Русский
-
-i18n_footer:
-  en: © D.K.
-  uk: © Д.К.
-  ru: © Д.К.
+i18n:
+  title:
+    en: *siteTitleEn
+    uk: Проект «Бункер»
+    ru: Проект «Бункер»
+  description:
+    en: *siteDescEn
+    uk: Приватний сервіс для веб-хостингу, DNS та електронної пошти
+    ru: Частный сервис для веб-хостинга, DNS и электронной почты
+  homepage:
+    en: Homepage
+    uk: Головна сторінка
+    ru: Главная страница
+  lang_name:
+    en: English
+    uk: Українська
+    ru: Русский
+  other_lang:
+    en: 'Other languages:'
+    uk: 'Інші мови:'
+    ru: 'Другие языки:'
+  footer:
+    en: © D.K.
+    uk: © Д.К.
+    ru: © Д.К.

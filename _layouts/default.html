@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="{{ page.lang }}">
   <head>
 {% include page-tag-head.html %}  </head>
   <body>
     <main>
       <header>
-        <div class="inner">
-          <h1>{{ page.title | escape }}</h1>
-        </div>
+        <h1>{{ page.title | escape }}</h1>
       </header>
-      <div class="inner">
 
 {{ content }}
-      </div>
     </main>
 {% include page-footer.html %}  </body>
 </html>

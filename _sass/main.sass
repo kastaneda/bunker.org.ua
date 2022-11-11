@@ -1,64 +1,52 @@
-$content-width:     46rem
-$gutter:            1.2rem
-
-html, body, .inner > *:first-child, footer *
-  margin: 0
-  padding: 0
-
-html, body
-  height: 100%
+html
+  font: normal 400 1.25rem/1.8 'Droid Serif', 'Sitka Text', 'Georgia', serif
 
 body
-  display: flex
-  flex-direction: column
-  font: normal 100% sans-serif
-  line-height: 1.5
-
-main
-  flex: 1
-  border-bottom: thin dotted
-
-.inner
-  max-width: $content-width
+  max-width: 50em
+  padding: 1em
   margin: 0 auto
-  padding: $gutter
-
-header
-  border-bottom: medium dotted
-
-nav
-  float: right
-
-  li
-    display: inline-block
-    margin: 0 0 0 .35em
-
-nav a, a.mail
-  color: inherit !important
 
 time
   font-style: italic
 
-@media print
-  nav
-    display: none
+footer
+  margin: 3em 0 0 0
+  border-top: solid thin
 
-@media (max-width: $content-width)
+.mail
+  color: inherit
+
+@media (min-width: 45em)
+  footer
+    display: grid
+    grid-template-columns: 2fr 3fr 8fr
+    gap: 1em
+
+  .col *
+    display: inline
+    padding: 0
+
+  .lang
+    grid-column: 3
+
+@media (max-width: 35em)
   li
-    margin: .5em 0
-
     time
-      display: none
+      display: block
 
-// Damn, should I really define colors?
+@media print
+  .nav
+    display: none
 
 @media (prefers-color-scheme: dark)
   html
-    background: #111
+    background: #000
+    color: #ccc
+
+  h1, h2, footer
     color: #999
 
   a
     color: #58c
-
     &:visited
       color: #a6c

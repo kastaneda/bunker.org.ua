@@ -6,8 +6,8 @@
 %}    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title | escape }}{% if page.ref != 'index' %} • {{
-        site.i18n_title[page.lang] | default: site.title | escape }}{% endif %}</title>
-    <meta name="description" content="{{ site.i18n_description[page.lang] | escape }}">
+        site.i18n.title[page.lang] | escape }}{% endif %}</title>
+    <meta name="description" content="{{ site.i18n.description[page.lang] | escape }}">
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{%
       if page.ref
 %}{%    assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
@@ -52,4 +52,7 @@
 %}{% endif %}
     <link rel="icon" href="{{ _root_prefix }}favicon.ico">
     <style>
-{{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' }}    </style>
+{{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' | replace: '
+
+', '
+'}}    </style>

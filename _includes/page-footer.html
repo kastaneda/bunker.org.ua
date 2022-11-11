@@ -1,29 +1,41 @@
     <footer>
-      <div class="inner">{%
+      <div class="col">
+        <p>{{ site.i18n.footer[page.lang] | escape }}</p>
+      </div>{%
+      if _root_prefix != '' %}
+      <div class="col nav">
+        <p><a href="{{ _root_prefix }}index.{{ page.lang | default: site.lang | default: 'en' }}.html">{{ site.i18n.homepage[page.lang] }}</a></p>
+      </div>{%
+      endif %}{%
       if page.ref %}
+      <div class="col lang">
+        <p>{{ site.i18n.other_lang[page.lang] }}</p>
         <nav>
           <ul>{%
-        assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
-%}{%    for _item in _list
-%}{%      if _item.url != page.url and (site.i18n_lang_names contains _item.lang)
-%}{%        assign _item_url = _item.url | split: '/' | last %}
+        assign _list = site.posts | where: 'ref', page.ref
+%}{%    for _lang in site.i18n_lang_order
+%}{%      for _item in _list
+%}{%        if (_item.lang == _lang) and (_item.url != page.url)
+%}{%          assign _item_url = _item.url | split: '/' | last %}
             <li lang="{{ _item.lang }}">
-              <a href="{{ _item_url }}" hreflang="{{ _item.lang }}">{{ site.i18n_lang_names[_item.lang] }}</a>
+              <a href="{{ _item_url }}" hreflang="{{ _item.lang }}">{{ site.i18n.lang_name[_item.lang] }}</a>
             </li>{%
-          endif
+            endif
+%}{%      endfor
 %}{%    endfor
-%}{%    assign _list = site.pages | where: 'ref', page.ref | sort: 'lang'
-%}{%    for _item in _list
-%}{%      if (_item.url != page.url) and (site.i18n_lang_names contains _item.lang)
-%}{%        assign _item_url = _item.url | split: '/' | last %}
+%}{%    assign _list = site.pages | where: 'ref', page.ref
+%}{%    for _lang in site.i18n_lang_order
+%}{%      for _item in _list
+%}{%        if (_item.lang == _lang) and (_item.url != page.url)
+%}{%          assign _item_url = _item.url | split: '/' | last %}
             <li lang="{{ _item.lang }}">
-              <a href="{{ _item_url }}" hreflang="{{ _item.lang }}">{{ site.i18n_lang_names[_item.lang] }}</a>
+              <a href="{{ _item_url }}" hreflang="{{ _item.lang }}">{{ site.i18n.lang_name[_item.lang] }}</a>
             </li>{%
-          endif
+            endif
+%}{%      endfor
 %}{%    endfor %}
           </ul>
-        </nav>{%
+        </nav>
+      </div>{%
         endif %}
-        <p>{{ site.i18n_footer[page.lang] | escape }}</p>
-      </div>
     </footer>
