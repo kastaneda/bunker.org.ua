@@ -9,25 +9,26 @@ body
 time
   font-style: italic
 
+.mail
+  color: inherit
+
 footer
   margin: 3em 0 0 0
   border-top: solid thin
 
-.mail
-  color: inherit
-
 @media (min-width: 45em)
-  footer
-    display: grid
-    grid-template-columns: 2fr 3fr 8fr
-    gap: 1em
+  @supports (display: grid)
+    footer
+      display: grid
+      grid-template-columns: 2fr 3fr 8fr
+      gap: 1em
 
-  .col *
-    display: inline
-    padding: 0
+    .col *
+      display: inline
+      padding: 0
 
-  .lang
-    grid-column: 3
+    .lang
+      grid-column: 3
 
 @media (max-width: 35em)
   li
