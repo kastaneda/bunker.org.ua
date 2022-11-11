@@ -2,7 +2,7 @@
 title: &siteTitleEn The Bunker project
 description: &siteDescEn Private service for web hosting, DNS, and email
 
-timezone: Europe/Kiev
+timezone: Europe/Kyiv
 url: https://bunker.org.ua
 baseurl: ''
 lang: en
