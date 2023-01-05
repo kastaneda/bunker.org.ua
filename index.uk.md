@@ -5,7 +5,7 @@ ref: index
 date: 2020-01-06 14:45:00 +02:00
 mtime: 2020-05-20 04:50:00 +0300
 head_extras:
- - <link rel="alternate" type="application/rss+xml" href="feed.uk.xml">
+ - <link rel="alternate" type="application/rss+xml" href="feed.uk.xml" title="Стрічка RSS">
 ---
 
 Проект «Бункер» — це невеликий приватний сервіс для веб-хостингу,

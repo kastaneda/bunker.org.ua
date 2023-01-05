@@ -5,7 +5,7 @@ ref: index
 date: 2020-01-06 14:45:00 +02:00
 mtime: 2020-05-20 04:50:00 +0300
 head_extras:
- - <link rel="alternate" type="application/rss+xml" href="feed.ru.xml">
+ - <link rel="alternate" type="application/rss+xml" href="feed.ru.xml" title="Канал RSS">
 ---
 
 Проект «Бункер» — это небольшой частный сервис для веб-хостинга,
