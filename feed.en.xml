@@ -3,4 +3,4 @@ layout: null
 lang: en
 ---
 
-{% include rss-feed.xml %}
+{% include atom-feed.xml %}

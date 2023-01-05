@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/atom.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ page.lang }}">
+  <title>{{ site.i18n.feed_title[page.lang] }}</title>
+  <id>{{ site.url }}{{ site.baseurl }}{{ page.url }}</id>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <subtitle>{{ site.i18n.description[page.lang] }}</subtitle>
+  <link href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" rel="self" />
+  <link href="{{ site.url }}{{ site.baseurl }}/index.{{ page.lang }}.html" />
+  <author>
+    <name>{{ site.i18n.feed_author[page.lang] }}</name>
+  </author>{%
+      assign _list = site.posts | where: 'lang', page.lang
+%}{%  for _item in _list limit: 10 %}
+  <entry>
+    <id>{{ site.url }}{{ site.baseurl }}{{ _item.url }}</id>
+    <title>{{ _item.title | xml_escape }}</title>
+    <published>{{ _item.date | date_to_xmlschema }}</published>
+    <updated>{{ _item.mtime | default: _item.date | date_to_xmlschema }}</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        {{ _item.content | strip | replace: '
+
+', '
+' | replace: '
+', '
+        '}}
+      </div>
+    </content>
+    <link href="{{ site.url }}{{ site.baseurl }}{{ _item.url }}" />
+  </entry>{%
+      endfor %}
+</feed>

@@ -27,11 +27,11 @@ sass:
   style: compact
 
 i18n_lang_order:
-  - en
   - uk
+  - en
 
 i18n:
-  title:
+  feed_title:
     en: *siteTitleEn
     uk: Проект «Бункер»
     ru: Проект «Бункер»
@@ -55,3 +55,7 @@ i18n:
     en: © D.K.
     uk: © Д.К.
     ru: © Д.К.
+  feed_author:
+    en: Dmytro Kolesnykov
+    uk: Дмитро Колесников
+    ru: Дмитрий Колесников
