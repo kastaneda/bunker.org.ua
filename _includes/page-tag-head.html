@@ -11,13 +11,17 @@
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{%
       if page.ref
 %}{%    assign _list = site.posts | where: 'ref', page.ref | sort: 'lang'
-%}{%    for _item in _list %}
-    <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ site.url }}{{ site.baseurl }}{{ _item.url }}">{%
-        endfor
+%}{%    for _item in _list
+%}{%      if _item.url != page.url %}
+    <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ site.url }}{{ site.baseurl }}{{ _item.url }}" title="{{ site.i18n.lang_name[_item.lang] }}">{%
+          endif
+%}{%    endfor
 %}{%    assign _list = site.pages | where: 'ref', page.ref | sort: 'lang'
-%}{%    for _item in _list %}
-    <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ site.url }}{{ site.baseurl }}{{ _item.url }}">{%
-        endfor
+%}{%    for _item in _list
+%}{%      if _item.url != page.url %}
+    <link rel="alternate" hreflang="{{ _item.lang }}" href="{{ site.url }}{{ site.baseurl }}{{ _item.url }}" title="{{ site.i18n.lang_name[_item.lang] }}">{%
+          endif
+%}{%    endfor
 %}{%  endif
 %}{%  for _item in page.head_extras | default: [] %}
     {{  _item
