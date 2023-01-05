@@ -8,7 +8,7 @@
         <h1>{{ page.title | escape }}</h1>
       </header>
 
-{{ content }}
+{{ content | replace: ' itemscope=""', ' itemscope' }}
     </main>
 {% include page-footer.html %}  </body>
 </html>
