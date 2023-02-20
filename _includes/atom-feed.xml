@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="/atom.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ page.lang }}">
-  <title>{{ site.i18n.feed_title[page.lang] }}</title>
+  <title>{{ site.i18n.title[page.lang] }}</title>
   <id>{{ site.url }}{{ site.baseurl }}{{ page.url }}</id>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <subtitle>{{ site.i18n.description[page.lang] }}</subtitle>

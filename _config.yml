@@ -31,7 +31,7 @@ i18n_lang_order:
   - en
 
 i18n:
-  feed_title:
+  title:
     en: *siteTitleEn
     uk: Проект «Бункер»
     ru: Проект «Бункер»
