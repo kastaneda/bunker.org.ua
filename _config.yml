@@ -29,33 +29,41 @@ sass:
 i18n_lang_order:
   - uk
   - en
+  - pl
 
 i18n:
   title:
     en: *siteTitleEn
     uk: Проект «Бункер»
     ru: Проект «Бункер»
+    pl: Projekt „Bunkier”
   description:
     en: *siteDescEn
     uk: Приватний сервіс для веб-хостингу, DNS та електронної пошти
     ru: Частный сервис для веб-хостинга, DNS и электронной почты
+    pl: Prywatny serwis dla hostingu internetowego, DNS i e-poczty
   homepage:
     en: Homepage
     uk: Головна сторінка
     ru: Главная страница
+    pl: Strona główna
   lang_name:
     en: English
     uk: Українська
     ru: Русский
+    pl: Polski
   other_lang:
     en: 'Other languages:'
     uk: 'Інші мови:'
     ru: 'Другие языки:'
+    pl: 'Inne języki:'
   footer:
     en: © D.K.
     uk: © Д.К.
     ru: © Д.К.
+    pl: © D.K.
   feed_author:
     en: Dmytro Kolesnykov
     uk: Дмитро Колесников
     ru: Дмитрий Колесников
+    pl: Dmytro Kolesnykov

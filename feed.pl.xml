@@ -1,0 +1,6 @@
+---
+layout: null
+lang: pl
+---
+
+{% include atom-feed.xml %}
