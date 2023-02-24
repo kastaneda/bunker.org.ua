@@ -15,3 +15,7 @@ Content-language: ru
 URI: index.pl.html
 Content-type: text/html
 Content-language: pl
+
+URI: index.de.html
+Content-type: text/html
+Content-language: de

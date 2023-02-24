@@ -30,6 +30,7 @@ i18n_lang_order:
   - uk
   - en
   - pl
+  - de
 
 i18n:
   title:
@@ -37,33 +38,40 @@ i18n:
     uk: Проект «Бункер»
     ru: Проект «Бункер»
     pl: Projekt „Bunkier”
+    de: Das Projekt „Bunker“
   description:
     en: *siteDescEn
     uk: Приватний сервіс для веб-хостингу, DNS та електронної пошти
     ru: Частный сервис для веб-хостинга, DNS и электронной почты
     pl: Prywatny serwis dla hostingu internetowego, DNS i e-poczty
+    de: Privater Dienst für Webhosting, DNS und E-Mail
   homepage:
     en: Homepage
     uk: Головна сторінка
     ru: Главная страница
     pl: Strona główna
+    de: Startseite
   lang_name:
     en: English
     uk: Українська
     ru: Русский
     pl: Polski
+    de: Deutsch
   other_lang:
     en: 'Other languages:'
     uk: 'Інші мови:'
     ru: 'Другие языки:'
     pl: 'Inne języki:'
+    de: 'Andere Sprachen:'
   footer:
     en: © D.K.
     uk: © Д.К.
     ru: © Д.К.
     pl: © D.K.
+    de: © D.K.
   feed_author:
     en: Dmytro Kolesnykov
     uk: Дмитро Колесников
     ru: Дмитрий Колесников
     pl: Dmytro Kolesnykov
+    de: Dmytro Kolesnykov
