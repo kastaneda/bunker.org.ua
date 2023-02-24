@@ -1,6 +1,0 @@
----
-layout: null
-lang: ru
----
-
-{% include atom-feed.xml %}
