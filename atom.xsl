@@ -18,6 +18,7 @@ sitemap: false
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
     <title><xsl:value-of select="/atom:feed/atom:title"/></title>
     <style>
 {{ '@import "main"' | sassify | remove_first: '@charset "UTF-8";' | replace: '
